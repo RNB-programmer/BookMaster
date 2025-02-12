@@ -1,0 +1,39 @@
+﻿<Window x:Class="BookMaster.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookMaster"
+        mc:Ignorable="d"
+        Title="BookMaster3000" Height="900" Width="1600" MinHeight="720" MinWidth="1280" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="Файл">
+                <MenuItem Name ="LoginMi"  Header="Вход в систему"
+                          Click="LoginMi_Click"/>
+                <MenuItem Name ="LogoutMi" Header="Выход из системы"
+                          Click="Logout_Click"/>
+                <MenuItem Name="CloseMi" Header="Закрыть приложение"
+                          Click="CloseMi_Click"/>
+            </MenuItem>
+            <MenuItem Name="Library" Header="Библиотека">
+
+                    <MenuItem Name="BrowseCatalog" Header="Управление читателями" Click="BrowseCatalog_Click"/>
+                    
+                    <MenuItem Name="ManageCustomers" Header="Управление читателями" Click="ManageCustomersMi_Click"/>
+
+                    <MenuItem Name ="Circulation" Header="Управление абониментом" Click="CirculationMi_Click"/>
+                          
+                    <MenuItem Name ="Reports" Header="Отчёты" Click="Reports_Click"/>
+                
+            </MenuItem>
+        </Menu>
+                <Frame Name ="MainFrame" Grid.Row="2"/> 
+    </Grid>
+</Window>
