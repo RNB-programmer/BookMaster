@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Pages\BrowseCatalogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\Circulation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -82,6 +86,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\Pages\BrowseCatalogPage.xaml.cs">
+      <DependentUpon>BrowseCatalogPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Circulation.xaml.cs">
       <DependentUpon>Circulation.xaml</DependentUpon>
@@ -133,9 +140,19 @@
     <Folder Include="AppData\" />
     <Folder Include="Model\" />
     <Folder Include="Resources\Fonts\" />
-    <Folder Include="Resources\Icons\" />
-    <Folder Include="Resources\Images\" />
     <Folder Include="Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\booklogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
