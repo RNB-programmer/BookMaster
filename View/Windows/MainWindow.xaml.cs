@@ -1,4 +1,5 @@
-﻿using BookMaster.View.Windows;
+﻿using BookMaster.View.Pages;
+using BookMaster.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,9 +27,9 @@ namespace BookMaster
             InitializeComponent();
 
 
-            LogoutMi.Visibility=Visibility.Hidden;
+            LogoutMi.Visibility=Visibility.Collapsed;
 
-            Library.Visibility = Visibility.Hidden;
+            Library.Visibility = Visibility.Visible;
         }
         private void LoginMi_Click(object sender, RoutedEventArgs e)
         {
@@ -51,19 +52,21 @@ namespace BookMaster
             // Для ревлизации навигации нужно:
             // 1) Обратиться к элементу Frame по имени и вызываем метод Navigation()
             // 2) В качестве аргумента передаём в метод экземпляр страницы, которую нужно открыть
+
+            MainFrame.Navigate(new BrowseCatalog());
         }
         private void LooutMi_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainFrame.Navigate(new Loout());
         }
 
        private void LibraryWatchMi_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new LibraryWatch());
         }
        private void ManageCustomersMi(object sender, RoutedEventArgs e)
-        { 
-       
+        {
+            MainFrame.Navigate(new ManageCustomers());
         }
     }
 }
